@@ -12,6 +12,28 @@ Stub repository initialized for Summer 2026. This repository will become the cen
 - Track baseline system goals for July and extension work for August.
 - Consolidate room-system documentation and integration standards.
 
+## Related Repositories
+
+### Primary META-Projects
+
+- [META-Blended-Reality-Performance-System](https://github.com/CHI-CityTech/META-Blended-Reality-Performance-System): BRPS meta-layer context linking performance, room systems, and blended-reality integration.
+- [META-CHIIDS](https://github.com/CHI-CityTech/META-CHIIDS): broader CHI integrated digital systems framing and architecture context.
+
+### Associated Projects
+
+- [CHI-StudentResearch](https://github.com/CHI-CityTech/CHI-StudentResearch): Summer 2026 operations, student intake, launch planning, and active cohort coordination.
+- [Bio-Aware Blended Space (BABS)](https://github.com/CHI-CityTech/BABS): bio-aware blended-spaces work treated as a SAR subset/component where relevant.
+- [Unity-BSP](https://github.com/CHI-CityTech/Unity-BSP): digital twin and virtual-physical mapping work connected to SAR room-state modeling.
+- [AVMI-GVSC-SoundSystem](https://github.com/CHI-CityTech/AVMI-GVSC-SoundSystem): related audio-routing and room-system infrastructure work where sound deployment overlaps with SAR implementation.
+- [Personalized-LLM](https://github.com/CHI-CityTech/Personalized-LLM): related AI/LLM experimentation that may inform SAR semantic and agent-support workflows.
+
+## Relationship Notes
+
+- Self Aware Room is coordinated with Blended Shadow Puppet through BRPS-aligned physical, virtual, media, and semantic integration workstreams.
+- BABS is treated as a defined subset/component within SAR when biological-entity interaction, perception, and related semantic interpretation are in scope.
+- AVMI-GVSC-SoundSystem is treated as an associated infrastructure project where SAR audio deployment, routing, and room-system integration overlap.
+- CHI-StudentResearch remains the active Summer 2026 cohort and operations repository, while this repository is intended to become the primary SAR project repository.
+
 ## Repository Layout
 
 - `docs/`: architecture, roadmap, and reference documents.
