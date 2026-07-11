@@ -40,6 +40,13 @@ Stub repository initialized for Summer 2026. This repository will become the cen
 - `operations/`: active planning and execution materials.
 - `workstreams/`: stream-specific trackers and handoff notes.
 
+## Student Project Intake
+
+- Student registration cards are submitted through the GitHub issue form: `.github/ISSUE_TEMPLATE/student_project_registration.yml`.
+- Intake cards are intended to feed a single tracking spreadsheet schema documented in `operations/student_project_intake_spreadsheet_schema.md`.
+- Contact information fields may be partially blank at first submission and completed during intake review.
+- First-day discussions focus on confirming first tasks, dependencies, and realistic weekly availability.
+
 ## Immediate Next Steps
 
 1. Confirm canonical SAR workstreams and owners.

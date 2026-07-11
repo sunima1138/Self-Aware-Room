@@ -1,0 +1,180 @@
+name: Student Project Registration
+description: Register a student project for SAR Summer 2026 intake and first-task planning
+title: "[Student Registration] <Student Name> - <Project Title>"
+labels:
+  - intake
+  - student-project
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to register your project and prepare first-task discussion.
+
+        Notes:
+        - Some contact fields may be left blank during first submission and completed later.
+        - First-day meetings focus on confirming first tasks, dependencies, and realistic availability.
+
+  - type: input
+    id: student_name
+    attributes:
+      label: Student Name
+      placeholder: Full name
+    validations:
+      required: true
+
+  - type: input
+    id: project_title
+    attributes:
+      label: Project Title
+      placeholder: Short project title
+    validations:
+      required: true
+
+  - type: textarea
+    id: project_summary
+    attributes:
+      label: Project Summary (1-3 sentences)
+      placeholder: What is the project and what does it aim to produce?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: workstream
+    attributes:
+      label: Primary Workstream
+      options:
+        - Physical Systems
+        - Virtual and Digital Twin
+        - Semantic and AI Layer
+        - Media and Documentation
+        - Audio and Routing
+        - Hybrid / Cross-Workstream
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "## Contact Information (Some fields may be completed later)"
+
+  - type: input
+    id: email
+    attributes:
+      label: Email
+      placeholder: citytech or preferred email
+    validations:
+      required: false
+
+  - type: input
+    id: github_username
+    attributes:
+      label: GitHub Username
+      placeholder: github handle (without @)
+    validations:
+      required: false
+
+  - type: input
+    id: discord_name
+    attributes:
+      label: Discord Name
+      placeholder: discord username
+    validations:
+      required: false
+
+  - type: input
+    id: zotero_profile
+    attributes:
+      label: Zotero (profile, user id, or note)
+      placeholder: profile link, username, or "pending"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "## Commitment and Availability"
+
+  - type: input
+    id: weekly_hours
+    attributes:
+      label: Weekly Time Commitment (hours)
+      placeholder: example: 8
+    validations:
+      required: true
+
+  - type: textarea
+    id: availability
+    attributes:
+      label: Weekly Availability
+      description: Include days and time windows when you can reliably contribute.
+      placeholder: |
+        Mon: 10:00-14:00
+        Wed: 12:00-16:00
+        Fri: 09:00-12:00
+    validations:
+      required: true
+
+  - type: textarea
+    id: conflicts
+    attributes:
+      label: Known Conflicts and Constraints
+      description: Include work schedule, personal constraints, commute constraints, or temporary blockers.
+      placeholder: List known conflicts and the weeks affected.
+    validations:
+      required: true
+
+  - type: textarea
+    id: commitment_plan
+    attributes:
+      label: Commitment Plan
+      description: Explain how you will honor your stated commitment and how you will communicate schedule changes.
+      placeholder: Short plan for reliability and communication.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "## Deliverables and First-Day Discussion"
+
+  - type: textarea
+    id: july_baseline
+    attributes:
+      label: July Baseline Deliverable
+      placeholder: What concrete output will you contribute by the July baseline?
+    validations:
+      required: true
+
+  - type: textarea
+    id: august_extension
+    attributes:
+      label: August Extension Direction
+      placeholder: What extension or iteration do you plan after baseline?
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: People, hardware, software, room access, approvals, or training needed.
+      placeholder: List dependencies and urgency.
+    validations:
+      required: true
+
+  - type: textarea
+    id: first_tasks
+    attributes:
+      label: Proposed First Tasks (Week 1)
+      placeholder: List 2-5 initial tasks for first-day discussion.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: Acknowledgements
+      options:
+        - label: I understand first-day discussion is for confirming first tasks, dependencies, and support needs.
+          required: true
+        - label: I will honor my stated weekly availability and communicate conflicts as early as possible.
+          required: true
+        - label: I understand contact fields left blank now may be completed during intake review.
+          required: true
