@@ -12,6 +12,10 @@ Stub repository initialized for Summer 2026. This repository will become the cen
 - Track baseline system goals for July and extension work for August.
 - Consolidate room-system documentation and integration standards.
 
+## Inventory List for integration of purchases
+
+[Inventory final : THis will hold all the inventory when finished](https://docs.google.com/spreadsheets/d/1xlmzvB_z3JYaaETMTt0t8i_Rfrj9V4yKD3l8Fw04o0s/edit?usp=sharing)
+
 ## Related Repositories
 
 ### Primary META-Projects
