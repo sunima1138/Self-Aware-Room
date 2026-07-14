@@ -14,7 +14,8 @@ Stub repository initialized for Summer 2026. This repository will become the cen
 
 ## Inventory List for integration of purchases
 
-[Inventory final : THis will hold all the inventory when finished](https://docs.google.com/spreadsheets/d/1xlmzvB_z3JYaaETMTt0t8i_Rfrj9V4yKD3l8Fw04o0s/edit?usp=sharing)
+[Inventory final : THis will hold all the inventory when finished](https://docs.google.com/spreadsheets/d/1xlmzvB_z3JYaaETMTt0t8i_Rfrj9V4yKD3l8Fw04o0s/edit?usp=sharing)  
+[OAA Inventory List to pull from and integrate with the main list](https://docs.google.com/spreadsheets/d/1Y4ND_M3c1ZKv1S4Bs0K1mHY8vtbBrymCsntErgicCTM/edit?usp=sharing)
 
 ## Related Repositories
 
