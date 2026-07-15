@@ -44,6 +44,7 @@ Stub repository initialized for Summer 2026. This repository will become the cen
 - `docs/`: architecture, roadmap, and reference documents.
 - `operations/`: active planning and execution materials.
 - `workstreams/`: stream-specific trackers and handoff notes.
+- `system/`: implementation artifacts by subsystem (video, audio, sensors, control, telemetry).
 
 ## Student Project Intake
 
