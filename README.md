@@ -1,10 +1,16 @@
-# Self Aware Room
+# Self-Aware Room
 
 Primary repository for the CHI Self Aware Room (SAR) project.
 
 ## Status
 
-Stub repository initialized for Summer 2026. This repository will become the central location for SAR operations, technical integration notes, and implementation artifacts.
+Teams assigned to Self-Aware Room:  
+- [Self Aware Room Team](https://github.com/orgs/CHI-CityTech/teams/self-aware-room)  
+  All members of the SAR project
+- [Video Production Team]()
+- [Audio Production Team](https://github.com/orgs/CHI-CityTech/teams/audio-production)
+- [Computation Team]()
+- [Structure Team]()  
 
 ## Summer 2026 Scope (Initial)
 
@@ -31,6 +37,7 @@ Stub repository initialized for Summer 2026. This repository will become the cen
 - [Unity-BSP](https://github.com/CHI-CityTech/Unity-BSP): digital twin and virtual-physical mapping work connected to SAR room-state modeling.
 - [AVMI-GVSC-SoundSystem](https://github.com/CHI-CityTech/AVMI-GVSC-SoundSystem): related audio-routing and room-system infrastructure work where sound deployment overlaps with SAR implementation.
 - [Personalized-LLM](https://github.com/CHI-CityTech/Personalized-LLM): related AI/LLM experimentation that may inform SAR semantic and agent-support workflows.
+- [Blended Shadow Puppet Theatre](): Significant overlap with many aspects of the SAR, including Tryptichs, Projection, Audio
 
 ## Relationship Notes
 
