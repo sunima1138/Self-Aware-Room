@@ -1,4 +1,4 @@
-# Self-Aware Room
+# Self-Aware Room (SAR)
 
 Primary repository for the CHI Self Aware Room (SAR) project.
 
@@ -7,10 +7,10 @@ Primary repository for the CHI Self Aware Room (SAR) project.
 Teams assigned to Self-Aware Room:  
 - [Self Aware Room Team](https://github.com/orgs/CHI-CityTech/teams/self-aware-room)  
   All members of the SAR project
-- [Video Production Team]()
+- [Video Production Team](https://github.com/orgs/CHI-CityTech/teams/video-production)
 - [Audio Production Team](https://github.com/orgs/CHI-CityTech/teams/audio-production)
-- [Computation Team]()
-- [Structure Team]()  
+- [Computation Team]() (Currently a stub)
+- [Structure Team]()  (Currently a stub)
 
 ## Summer 2026 Scope (Initial)
 
