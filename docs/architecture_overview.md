@@ -15,4 +15,4 @@
 
 ## Notes
 
-This document is a placeholder and should be replaced by the first authored SAR architecture draft.
+This document remains a short orientation stub. The primary generalized architecture is now documented in `SAR_General_Computational_Pipeline_Spec_V1_2026-07-18.md`.
