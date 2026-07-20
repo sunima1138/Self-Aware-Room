@@ -50,6 +50,7 @@ Teams assigned to Self-Aware Room:
 
 - `docs/`: architecture, roadmap, and reference documents.
 - `operations/`: active planning and execution materials.
+- `src/`: source code for the SAR computational pipeline.
 - `workstreams/`: stream-specific trackers and handoff notes.
 - `system/`: implementation artifacts by subsystem (video, audio, sensors, control, telemetry).
 
