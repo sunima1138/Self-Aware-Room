@@ -1,0 +1,153 @@
+# SAR Sensor Intake: Phase 1 Technical Implementation Specification
+
+*Document Class:* System Architecture and Software Blueprint  
+*Project:* Self-Aware-Room (SAR)  
+*Phase:* 1 - Sensor Intake Proof of Concept  
+*Target Platform:* Local, modular Python runtime
+
+This document defines the first computational proof of concept for SAR. The goal is to intake sensor and AV signals, normalize them into a shared room-state format, and route them through a lightweight rules layer before any larger spatial or cognitive integration.
+
+## Purpose
+
+Sensor Intake is the first SAR computational milestone. It is intentionally narrow:
+
+- verify that audio and auxiliary sensor streams can be captured reliably,
+- normalize raw inputs into a shared packet format,
+- preserve provenance for each source and timestamp,
+- support a deterministic rules path before any LLM-based reasoning,
+- leave room for later audio/video integration.
+
+## Scope
+
+Phase 1 covers the intake path only. It does not attempt full room orchestration.
+
+Included:
+
+- microphone or line-in audio capture,
+- basic sensor telemetry such as temperature or presence signals,
+- buffering and timestamping,
+- lightweight feature extraction where required,
+- structured packet emission,
+- rules-based output dispatch.
+
+Excluded for this phase:
+
+- full digital twin synchronization,
+- multi-room routing,
+- advanced fusion across all subsystems,
+- long-term archival workflows,
+- production UI or dashboard work.
+
+## Architectural Model
+
+The intake path is organized as a simple staged pipeline.
+
+```text
+Sensor / AV Input
+  -> Capture Layer
+  -> Normalization Layer
+  -> Shared Packet Schema
+  -> Rules Layer
+  -> Output / Handoff
+```
+
+### 1. Capture Layer
+
+Responsibilities:
+
+- acquire raw data from each source without blocking the runtime,
+- place incoming data into thread-safe queues,
+- preserve source identity and source-local timing.
+
+### 2. Normalization Layer
+
+Responsibilities:
+
+- convert raw audio into short windows or text where needed,
+- pass simple telemetry through without unnecessary transformation,
+- attach metadata needed for downstream routing.
+
+### 3. Shared Packet Schema
+
+Each intake event should be represented as a standard packet.
+
+```json
+{
+  "device_id": "OAA_AUDIO_N_01",
+  "data_type": "semantic_text",
+  "source_timestamp": "2026-07-17T16:49:00.123Z",
+  "spatial_coordinates": {"x": 0.0, "y": 4.5, "z": 2.1},
+  "payload": "Activate forest theme environment"
+}
+```
+
+Field definitions:
+
+- `device_id`: unique identifier for the source device or logical intake source.
+- `data_type`: normalized class for the packet, such as `semantic_text` or `raw_telemetry`.
+- `source_timestamp`: timestamp recorded at emission or intake time.
+- `spatial_coordinates`: room-relative position metadata for the source.
+- `payload`: the actual content carried by the packet after normalization or pass-through.
+
+### 4. Rules Layer
+
+The rules layer is the first decision point.
+
+- hard-coded keywords such as STOP or HALT must trigger immediate override,
+- known room-state phrases can map directly to output commands,
+- ambiguous inputs can be forwarded to a later cognitive layer if needed.
+
+## Sensor Intake Requirements
+
+The intake project should support the following early checks:
+
+- confirm that each source can connect and stream,
+- confirm that data lands in the correct queue,
+- confirm that timestamps are attached consistently,
+- confirm that packet structure is stable,
+- confirm that rules can fire without waiting on heavy processing.
+
+For this proof of concept, the highest-value signal is not model accuracy. It is whether the room can reliably accept, label, and route inputs.
+
+## Reference Prototype
+
+The prototype can be built as a small multi-threaded Python service:
+
+- one thread for audio capture,
+- one thread for non-audio sensor polling or mocking,
+- one mediation loop that reads queues and emits normalized packets,
+- one rules function that applies deterministic checks,
+- one output function that hands off actions to later SAR systems.
+
+Suggested libraries:
+
+- `sounddevice` for live audio capture,
+- `queue` for thread-safe buffering,
+- `numpy` for array handling,
+- `faster-whisper` for local speech-to-text, if text extraction is needed,
+- `threading` for concurrent intake workers.
+
+## Implementation Notes
+
+- Keep the capture threads minimal and non-blocking.
+- Avoid mixing capture logic with interpretation logic.
+- Preserve the original payload when pass-through behavior is sufficient.
+- Treat the packet schema as the contract between intake and later SAR stages.
+- Keep this phase narrow enough that it can be tested in a single room setup.
+
+## Relation to SAR Team Structure
+
+Sensor Intake sits below the separate Audio, Video, and Integration issue lanes. Those lanes describe operational work. This document describes the computational substrate that makes those lanes useful.
+
+- Audio contributes source material and speech or signal extraction.
+- Video contributes camera or display-aligned inputs.
+- Integration defines handoff rules and cross-system coordination.
+- Sensor Intake defines how raw observations enter the system at all.
+
+## Next Steps
+
+1. Validate one live audio source.
+2. Validate one simple pass-through sensor.
+3. Confirm queue behavior and packet formatting.
+4. Add a small rules table for room-state triggers.
+5. Expand only after the intake contract is stable.
