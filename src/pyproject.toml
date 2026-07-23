@@ -1,0 +1,23 @@
+[project]
+name = "sar-pipeline-poc"
+version = "0.1.0"
+description = "SAR pipeline skeleton PoC (Observation -> Tiers/Levels -> Console output)"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.0",
+    "structlog",
+    "sounddevice",
+    "python-dotenv",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "mypy",
+    "ruff",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
