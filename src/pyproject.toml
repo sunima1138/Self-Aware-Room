@@ -5,6 +5,7 @@ description = "SAR pipeline skeleton PoC (Observation -> Tiers/Levels -> Console
 requires-python = ">=3.10"
 dependencies = [
     "pydantic>=2.0",
+    "numpy",
     "structlog",
     "sounddevice",
     "python-dotenv",
