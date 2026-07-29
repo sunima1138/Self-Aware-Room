@@ -1,6 +1,20 @@
 # Self-Aware Room (SAR)
 
-Primary repository for the CHI Self Aware Room (SAR) project.
+Primary repository for the CHI Self-Aware Room (SAR) project.
+
+Last updated: 2026-07-29
+
+## Current State
+
+This repository now contains active computational scaffolding, formal computational specifications, and subsystem-oriented implementation folders.
+
+## Quick Start (Computational Baseline)
+
+Use this path for first-time local setup and baseline validation:
+
+1. Setup instructions: [D04.02 Setup Instructions](docs/computational/D04.02_SAR_Computational_Pipeline_Setup_Instructions_V1_2026-07-29.md)
+2. Computational doc index: [Computational Document Index](docs/computational/README.md)
+3. Runnable demo entry point: [pipeline_demo.py](src/sar_apps/pipeline_demo.py)
 
 ## Status
 
@@ -12,6 +26,18 @@ Teams assigned to Self-Aware Room:
 - [Computation Team]() (Currently a stub)
 - [Structure Team]()  (Currently a stub)
 
+## Documentation Hierarchy
+
+The documentation set is organized as a multi-track hierarchy.
+
+- [docs/README.md](docs/README.md): top-level documentation index and conventions.
+- [docs/computational](docs/computational): Doc-ID-governed computational architecture and implementation specifications.
+- [docs/audio](docs/audio): audio-system design and integration documentation.
+- [docs/video](docs/video): video/projection and media-pipeline documentation.
+- [docs/structure](docs/structure): physical/structural design and integration documentation.
+- [docs/assets](docs/assets): shared document assets.
+- [docs/archive](docs/archive): superseded drafts and historical references.
+
 ## Summer 2026 Scope (Initial)
 
 - Coordinate SAR-facing technical, semantic, and infrastructure work.
@@ -20,7 +46,7 @@ Teams assigned to Self-Aware Room:
 
 ## Inventory List for integration of purchases
 
-[Inventory final : THis will hold all the inventory when finished](https://docs.google.com/spreadsheets/d/1xlmzvB_z3JYaaETMTt0t8i_Rfrj9V4yKD3l8Fw04o0s/edit?usp=sharing)  
+[Inventory final: this will hold all inventory when finished](https://docs.google.com/spreadsheets/d/1xlmzvB_z3JYaaETMTt0t8i_Rfrj9V4yKD3l8Fw04o0s/edit?usp=sharing)  
 [OAA Inventory List to pull from and integrate with the main list](https://docs.google.com/spreadsheets/d/1Y4ND_M3c1ZKv1S4Bs0K1mHY8vtbBrymCsntErgicCTM/edit?usp=sharing)
 
 ## Related Repositories
@@ -37,7 +63,7 @@ Teams assigned to Self-Aware Room:
 - [Unity-BSP](https://github.com/CHI-CityTech/Unity-BSP): digital twin and virtual-physical mapping work connected to SAR room-state modeling.
 - [AVMI-GVSC-SoundSystem](https://github.com/CHI-CityTech/AVMI-GVSC-SoundSystem): related audio-routing and room-system infrastructure work where sound deployment overlaps with SAR implementation.
 - [Personalized-LLM](https://github.com/CHI-CityTech/Personalized-LLM): related AI/LLM experimentation that may inform SAR semantic and agent-support workflows.
-- [Blended Shadow Puppet Theatre](): Significant overlap with many aspects of the SAR, including Tryptichs, Projection, Audio
+- Blended Shadow Puppet Theatre (link pending): significant overlap with SAR projection, audio, and media integration.
 
 ## Relationship Notes
 
@@ -48,11 +74,11 @@ Teams assigned to Self-Aware Room:
 
 ## Repository Layout
 
-- `docs/`: architecture, roadmap, and reference documents.
-- `operations/`: active planning and execution materials.
-- `src/`: source code for the SAR computational pipeline.
-- `workstreams/`: stream-specific trackers and handoff notes.
-- `system/`: implementation artifacts by subsystem (video, audio, sensors, control, telemetry).
+- docs/: architecture, roadmap, and subsystem documentation tracks.
+- operations/: active planning and execution materials.
+- src/: source code for SAR computational pipeline components and demos.
+- workstreams/: stream-specific trackers and handoff notes.
+- system/: implementation-facing artifacts by subsystem (video, audio, sensors, control, telemetry, structure).
 
 ## Student Project Intake
 
