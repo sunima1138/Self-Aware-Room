@@ -15,6 +15,8 @@ from .models import (
     SemanticState,
     State,
 )
+from .edge_ingress import EdgeObservationFrame, observation_from_edge_frame
+from .observability import LogLevel, LogRecord
 from .stages import StageComponent, StageResult, StageStatus, TelemetryEmitter
 
 __all__ = [
@@ -35,4 +37,8 @@ __all__ = [
     "StageStatus",
     "State",
     "TelemetryEmitter",
+    "EdgeObservationFrame",
+    "observation_from_edge_frame",
+    "LogLevel",
+    "LogRecord",
 ]

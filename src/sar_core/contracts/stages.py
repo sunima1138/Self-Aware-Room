@@ -40,9 +40,42 @@ class StageComponent(ABC):
     """Interface-first base class for layer components."""
 
     stage_name: str
+    telemetry: TelemetryEmitter | None
 
-    def __init__(self, stage_name: str) -> None:
+    def __init__(self, stage_name: str, telemetry: TelemetryEmitter | None = None) -> None:
         self.stage_name = stage_name
+        self.telemetry = telemetry
+
+    def _emit_received(self, input_count: int) -> None:
+        if self.telemetry is None:
+            return
+        self.telemetry.emit_status(self.stage_name, StageStatus.OK, f"Received {input_count} object(s).")
+
+    def _emit_transformed(self, input_count: int, output_count: int) -> None:
+        if self.telemetry is None:
+            return
+        self.telemetry.emit_status(
+            self.stage_name,
+            StageStatus.OK,
+            f"Transformed {input_count} object(s) into {output_count} object(s).",
+        )
+        self.telemetry.emit_trace(self.stage_name, input_count=input_count, output_count=output_count)
+
+    def _emit_sent(self, output_count: int) -> None:
+        if self.telemetry is None:
+            return
+        self.telemetry.emit_status(self.stage_name, StageStatus.OK, f"Sent {output_count} object(s).")
+
+    def _emit_error(self, message: str) -> None:
+        if self.telemetry is None:
+            return
+        self.telemetry.emit_status(self.stage_name, StageStatus.ERROR, message)
+
+    def _emit_indeterminate(self, message: str, input_count: int) -> None:
+        if self.telemetry is None:
+            return
+        self.telemetry.emit_status(self.stage_name, StageStatus.INDETERMINATE, message)
+        self.telemetry.emit_trace(self.stage_name, input_count=input_count, output_count=0)
 
     @abstractmethod
     def accept_input(self, input_objects: list[DataObject]) -> bool:

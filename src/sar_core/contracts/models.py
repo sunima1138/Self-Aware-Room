@@ -70,7 +70,7 @@ class Observation(DataObject):
     source_id: str = ""
 
     def __post_init__(self) -> None:
-        super().__post_init__()
+        DataObject.__post_init__(self)
         self.object_type = ObjectType.OBSERVATION
 
 
@@ -96,7 +96,7 @@ class Event(DataObject):
     observation_ids: list[str] = field(default_factory=list)
 
     def __post_init__(self) -> None:
-        super().__post_init__()
+        DataObject.__post_init__(self)
         self.object_type = ObjectType.EVENT
 
         # Keep event aggregation inputs explicit and mirrored in provenance.
@@ -129,7 +129,7 @@ class Entity(DataObject):
     is_canonical_room: bool = False
 
     def __post_init__(self) -> None:
-        super().__post_init__()
+        DataObject.__post_init__(self)
         self.object_type = ObjectType.ENTITY
 
 
@@ -141,7 +141,7 @@ class State(DataObject):
     room_entity_id: str | None = None
 
     def __post_init__(self) -> None:
-        super().__post_init__()
+        DataObject.__post_init__(self)
         self.object_type = ObjectType.STATE
 
 
@@ -152,7 +152,7 @@ class SemanticState(DataObject):
     semantic_label: str | None = None
 
     def __post_init__(self) -> None:
-        super().__post_init__()
+        DataObject.__post_init__(self)
         self.object_type = ObjectType.SEMANTIC_STATE
 
 
@@ -163,7 +163,7 @@ class Decision(DataObject):
     policy_result: str | None = None
 
     def __post_init__(self) -> None:
-        super().__post_init__()
+        DataObject.__post_init__(self)
         self.object_type = ObjectType.DECISION
 
 
@@ -174,7 +174,7 @@ class Intent(DataObject):
     intent_name: str | None = None
 
     def __post_init__(self) -> None:
-        super().__post_init__()
+        DataObject.__post_init__(self)
         self.object_type = ObjectType.INTENT
 
 
@@ -185,7 +185,7 @@ class ExecutionPlan(DataObject):
     steps: list[dict[str, Any]] = field(default_factory=list)
 
     def __post_init__(self) -> None:
-        super().__post_init__()
+        DataObject.__post_init__(self)
         self.object_type = ObjectType.EXECUTION_PLAN
 
 
@@ -196,7 +196,7 @@ class Dispatch(DataObject):
     channel: str | None = None
 
     def __post_init__(self) -> None:
-        super().__post_init__()
+        DataObject.__post_init__(self)
         self.object_type = ObjectType.DISPATCH
 
 
@@ -207,7 +207,7 @@ class EvaluationRecord(DataObject):
     metric_name: str | None = None
 
     def __post_init__(self) -> None:
-        super().__post_init__()
+        DataObject.__post_init__(self)
         self.object_type = ObjectType.EVALUATION_RECORD
 
 
