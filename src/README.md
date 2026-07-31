@@ -1,6 +1,6 @@
 # src
 
-This directory is reserved for SAR computational implementation artifacts.
+This directory contains SAR computational implementation artifacts.
 
 Intended contents include:
 
@@ -11,4 +11,4 @@ Intended contents include:
 
 Document-support assets should remain under `docs/`, especially `docs/assets/`.
 
-At the current stage of the project, this directory exists as the placeholder for the future implementation codebase.
+Current baseline implementation includes active scaffold modules under `sar_core` and a runnable vertical-slice example at `sar_apps/pipeline_demo.py`.
